@@ -1,6 +1,8 @@
 <?php
+//Array of top countries 
 $countries = array('us', 'uk', 'italy', 'spain', 'france', 'brazil', 'belgium', 'germany', 'mexico', 'iran');
 
+//Their populations
 $populations = array("us"=>332639102, "uk"=>67886011, "italy"=>60461826, "spain"=>46754778, "france"=>65273511,
     "brazil"=>212559417, "belgium"=>11589623, "germany"=>83783942, "mexico"=>128932753, "iran"=>83992949);
 
