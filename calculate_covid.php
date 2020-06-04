@@ -1,4 +1,6 @@
 <?php
+//Get the current date
+$date = date("m/d/Y");
 //Array of top countries 
 $countries = array('us', 'uk', 'italy', 'spain', 'france', 'brazil', 'belgium', 'germany', 'mexico', 'iran');
 
@@ -35,10 +37,10 @@ $result = array();
 
 //Sort array in descending order and maintain index association
 arsort($combined, SORT_NUMERIC);
-echo "Total Deaths (Sorted Descending)";
-echo "\n------------\n";
+echo "Total Deaths as of $date (Sorted Descending)";
+echo "\n----------------------------------------------------------\n";
 foreach($combined as $key=>$item) {
-    echo $key.": ".$item."\n";
+    echo $key.": ".number_format($item)."\n";
 }
 echo "\n\n";
 //Get percentages of country populations that are covid
@@ -51,8 +53,8 @@ foreach($merged as $key=>$item) {
 $columns = array_column($result, 'percent');
 array_multisort($columns, SORT_DESC, $result);
 
-echo "Percentage of Population (Sorted Descending)";
-echo "\n------------------------\n";
+echo "Percentage of Population as of $date (Sorted Descending)";
+echo "\n----------------------------------------------------------\n";
 foreach($result as $item) {
     echo $item['country'].": ".$item['percent']."%\n";
 }
