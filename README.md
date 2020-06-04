@@ -6,7 +6,7 @@ To execute:
 
 Example output: 
 
-Total Deaths<br/>
+Total Deaths (Sorted Descending)<br/>
 ------------<br/>
 us: 109176<br/>
 uk: 39728<br/>
