@@ -14,6 +14,7 @@ foreach($isos as $iso) {
     curl_setopt($pop_curl, CURLOPT_RETURNTRANSFER, true);
     $pop_resp = curl_exec($pop_curl);
     $pop_resp = json_decode($pop_resp, true);
+
     switch($iso) {
         case 'usa':
             $iso = 'us';
@@ -46,10 +47,10 @@ foreach($isos as $iso) {
             $iso = 'iran';
             break;
     }
+
     $populations[$iso] = $pop_resp['population'];
     curl_close($pop_curl);
 }
-//print_r($populations);
 
 $result_array = array();
 
